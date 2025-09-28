@@ -1,0 +1,188 @@
+/*import kotlin.random.Random
+fun main()
+{
+    val part1 = arrayOf("Опытный","Безумный","Легендарный","Скрытый","Гигачад")
+    val part2 = arrayOf("стрелок", "геймер","воин","волшебник","трейдер")
+    val part3 = arrayOf("из csgo","на максималках","из будущего","в бане у Габена", "с проклтым лутом")
+    val rand1 = Random.nextInt(part1.size)
+    val rand2 = Random.nextInt(part2.size)
+    val rand3 = Random.nextInt(part3.size)
+    val phrase = "${part1[rand1]} ${part2[rand2]} ${part3[rand3]}"
+    println("Ваш титул: $phrase")
+}*/
+
+//Zd-1
+/*import kotlin.random.Random
+fun main() {
+    val chislo = Random.nextInt(from = 1, until = 51)
+    println("Угадай число от 1 до 50")
+
+    while (true) {
+        print("Введи число: ")
+        val input = readln().toInt()
+        when {
+            input < chislo -> println("число больше.")
+            input > chislo -> println("число меньше.")
+            else -> {
+                println("угадал число $chislo")
+                break
+            }
+        }
+    }
+}*/
+
+//zd-2
+/*
+fun main()
+{
+    print("Задай строку: ")
+    val input = readln()
+    val bykvi = "аеёиоуыэюяaeiou"
+    var ch = 0
+    for (i in input.lowercase()){
+        if (i in bykvi){
+            ch++
+        }
+    }
+    println("Вот столько гласных: $ch")
+}
+*/
+//zd-3
+/*
+fun main(){
+    print("Задай N:")
+    var N = readln().toInt()
+    println("В обратном от $N до 1: ")
+    while(N>=1){
+        println(N)
+        N--
+    }
+}*/
+
+//zd4
+/*
+import kotlin.random.Random
+fun main(){
+    val bykvamal="abcdefghijklmnopqrstuvwxyz"
+    val bykvabolh="ABCDEFGHIJKLMNOPGRSTUVWXYZ"
+    val cifri="0123456789"
+    val simvol = "!@#$%&*"
+    val vse = bykvamal+bykvabolh+cifri+simvol
+    val dlina = Random.nextInt(8,17)
+    var parol = ""
+    parol += bykvamal[Random.nextInt(bykvamal.length)]
+    parol+= bykvabolh[Random.nextInt(bykvabolh.length)]
+    parol+= cifri[Random.nextInt(cifri.length)]
+    parol+= simvol[Random.nextInt(simvol.length)]
+    for( i in 5..dlina){
+        val randomniy=Random.nextInt(vse.length)
+        parol+=vse[randomniy]
+    }
+    println("Твой пароль выглядит так: $parol")
+    println("Его длина: ${parol.length}")
+}
+*/
+
+
+//zd5
+/*
+fun main(){
+    print("Твое имя:")
+    val imya = readln()
+    print("Твоя любимая игра?")
+    val vopros1 = readln()
+    print("Твой любимый город?")
+    val vopros2 = readln()
+    print("Твоя любимая марка авто?")
+    val vopros3 = readln()
+
+    val otziv= listOf("Ты крутой!","Хорошая работа!","Тигр вацок","Просто лев")
+    val randomotz=otziv.random()
+    println("Имя:$imya")
+    println("Твоя любимая игра: $vopros1")
+    println("Твой любимый город: $vopros2")
+    println("Твоя любимая марка авто: $vopros3")
+    println("Отзыв: $randomotz")
+}*/
+
+
+//Zd-6
+/*
+fun main(){
+    print("Задай N: ")
+    val N = readln().toInt()
+    var sum = 0
+    var ch = 0
+    while (ch <= N){
+        sum+=ch
+        ch++
+    }
+    println("Сумма от 1 до $N = $sum")
+}*/
+
+
+//zd-7
+/*import kotlin.random.Random
+fun main(){
+    for (i in 1..10){
+        val kyb1=Random.nextInt(1,7)
+        println("Бросок $i: $kyb1")
+    }
+}*/
+
+//zd-8
+/*
+import kotlin.random.Random
+fun main(){
+    val num1 = Random.nextInt(0,6)
+    val num2 = Random.nextInt(0,6)
+    val num3 = Random.nextInt(0,6)
+    println("Рез:$num1 $num2 $num3")
+    if (num1==num2&& num2==num3){
+        println("Джекпот")
+    }
+}*/
+
+//zd9
+/*
+import kotlin.random.Random
+fun main(){
+    var nachety=Random.nextInt(100,1001)
+    var den = 1
+    println("На счету $nachety")
+    while (nachety>0){
+        val snyat=Random.nextInt(10,101)
+        if (snyat>nachety){
+            println("День - $den сняли - ${nachety} рублей, осталось 0")
+            nachety=0
+
+        }else{
+            nachety = nachety-snyat
+            println("День $den: сняли $snyat руб, осталось $nachety руб")
+        }
+        den=den+1
+    }
+    println("денег больше нет, иди работай...")
+}*/
+
+
+//zd10
+
+import kotlin.random.Random
+fun main(){
+    val nedelya= listOf("Понедельник","Вторник","Среда","Четверг","Пятница","Суббота","Воскресенье")
+    for (den in nedelya){
+        val temp = Random.nextInt(-10,31)
+        println("$den: $temp °C")
+
+    }
+    for (den in nedelya){
+        val temp = Random.nextInt(-10,31)
+        if (temp<0){
+            println("$den: $temp °C(ниже нуля)")
+        }
+    }
+}
+
+
+
